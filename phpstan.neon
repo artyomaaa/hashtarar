@@ -1,0 +1,20 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+parameters:
+    paths:
+        - app
+        - config
+        - database
+        - routes
+        - bootstrap
+        - resources/lang
+        - tests
+    level: 8
+    inferPrivatePropertyTypeFromConstructor: true
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+
+    ignoreErrors:
+            - '#Access to an undefined property Illuminate\\Database\\Eloquent\\Model(.*)::\$.*#'
+            - '#Access to an undefined property App\\Models\\Model(.*)::\$.*#'
+
